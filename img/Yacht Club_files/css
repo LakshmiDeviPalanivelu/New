@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Belgrano';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Belgrano'), local('Belgrano-Regular'), url(http://fonts.gstatic.com/s/belgrano/v6/9nICvxZmkDv7_ninPVYjofesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Courgette';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Courgette Regular'), local('Courgette-Regular'), url(http://fonts.gstatic.com/s/courgette/v4/Gkr63O-aJXf4Mv4t7cBUcj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}

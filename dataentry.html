@@ -1,0 +1,47 @@
+<html><center>
+<table>
+<form action="" method="post">
+<h1> Data entry Form</h1>
+<tr><td>Name</td><td><input type="text" name="name"></td></tr>
+<tr><td>year</td><td><select name="year">
+<option>1 year</option>
+<option> 2year</option>
+<option>3 year</option>
+</select></td></tr>
+<tr><td>department</td><td><select name="dept">
+<option>BSC</option>
+<option>BCA</option>
+<option>BCOM</option>
+<option>MSC</option>
+<option>MCOM</option></select></td></tr>
+<tr><td>Semester</td><td><select name="sem">
+<option>1 semester</option>
+<option>2 semester</option>
+<option>3 semester</option>
+<option>4 semester</option>
+<option>5 semester</option>
+<option>6 semester</option>
+</select></td></tr>
+<tr><td>Bus stop<td><input type="text" name="bname"></td></tr>
+<tr><td>FeePaid</td><td><input type="text" name="fee"></td></tr>
+<tr><td>Dues</td><td><input type="text" name="due"></td></tr>
+<tr><td>RouteNo</td><td><input type="text" name="rono"></td></tr>
+<tr><td>Time</td><td><input type="text" name="time"></td></tr>
+<tr><td><input type="submit" name="submit" name="submit"></td></tr>
+</table>
+<a href="route1.php">View Route1</a> 
+<a href="route2.php">View Route2</a> 
+<a href="route3.php">View Route3</a> 
+</form>
+</html>
+<?php
+$con=mysql_connect("localhost","root","");
+mysql_select_db("college",$con);?>
+<?php
+if(isset($_POST['submit']))
+{
+$ins=mysql_query("insert into reg (name,year,department,sem,busstop,feepaid,due,routeno,time)values('".$_POST['name']."','".$_POST['year']."','".$_POST['dept']."','".$_POST['sem']."','".$_POST['bname']."',".$_POST['fee'].",".$_POST['due'].",".$_POST['rono'].",'".$_POST['time']."')",$con)or die(mysql_error());
+}
+
+?>
+   
